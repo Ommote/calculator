@@ -87,7 +87,7 @@ reset.addEventListener("click", function (event) {
 });
 
 var hello = function hello() {
-  display.innerText = "Hello, world";
+  display.innerText = "Hello";
 };
 
 message.addEventListener("click", function (event) {

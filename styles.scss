@@ -18,7 +18,7 @@ body {
   .calc {
     background-color: rgb(69, 108, 160);
 
-    height: 325px;
+    height: 350px;
     width: 200px;
     border-radius: 8px 8px 30px 30px;
 
@@ -36,7 +36,7 @@ body {
 
   #display {
     background-color: rgb(219, 219, 219);
-    height: 60px;
+    height: 80px;
     width: 160px;
     border-radius: 2px;
     margin-top: 15px;
@@ -44,9 +44,10 @@ body {
     padding: 5px 8px 0 8px;
     text-align: right;
     font-size: 30px;
-    box-shadow: inset 5px 2px black;
+    box-shadow: inset 6px 2px black;
     border: 2px solid black;
     border-right: 1 solid black;
+    font-size: 50px;
   }
 
   .button-container {
@@ -60,7 +61,7 @@ body {
       "message a b c divides"
       "reset d e f multiply"
       "modulus g h i minus"
-      "equals equals zero plus plus";
+      "equals equals equals zero plus";
     grid-gap: 4px;
 
     justify-content: center;
@@ -93,6 +94,12 @@ body {
   // ROW ONE
   #message {
     grid-area: message;
+    background-color: goldenrod;
+    color: white;
+  }
+  #message:active {
+    background-color: white;
+    color: black;
   }
   #seven {
     grid-area: a;
@@ -147,9 +154,11 @@ body {
 
   #equals {
     grid-area: equals;
+    width: 98px;
   }
   #plus {
     grid-area: plus;
+    width: 30px;
   }
 
   // button {

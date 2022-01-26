@@ -89,7 +89,7 @@ reset.addEventListener("click", (event) => {
 });
 
 const hello = () => {
-  display.innerText = "Hello, world";
+  display.innerText = "Hello";
 };
 
 message.addEventListener("click", (event) => {
