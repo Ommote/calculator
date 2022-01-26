@@ -18,4 +18,29 @@ var equals = document.getElementById("equals"); // other buttons
 var reset = document.getElementById("reset");
 var message = document.getElementById("message"); // array for storing inputs
 
-var calcArr = [];
+var calcArr = []; // logic for cycling through numbers and displaying result to display div
+
+numbers.forEach(function (number) {
+  number.addEventListener("click", function (event) {
+    if (display.innerText === "+") {
+      display.innerText = "";
+    } else if (display.innerText === "-") {
+      display.innerText = "";
+    } else if (display.innerText === "*") {
+      display.innerText = "";
+    } else if (display.innerText === "/") {
+      display.innerText = "";
+    }
+
+    display.innerText += number.innerHTML;
+  });
+}); // logic for cycling through operators
+
+operators.forEach(function (operator) {
+  operator.addEventListener("click", function (event) {
+    calcArr.push(display.innerText);
+    display.innerText = operator.innerHTML;
+    calcArr.push(operator.innerHTML);
+    console.log(calcArr);
+  });
+});

@@ -23,3 +23,30 @@ const message = document.getElementById("message");
 
 // array for storing inputs
 let calcArr = [];
+
+// logic for cycling through numbers and displaying result to display div
+numbers.forEach((number) => {
+  number.addEventListener("click", (event) => {
+    if (display.innerText === "+") {
+      display.innerText = "";
+    } else if (display.innerText === "-") {
+      display.innerText = "";
+    } else if (display.innerText === "*") {
+      display.innerText = "";
+    } else if (display.innerText === "/") {
+      display.innerText = "";
+    }
+    display.innerText += number.innerHTML;
+  });
+});
+
+// logic for cycling through operators
+operators.forEach((operator) => {
+  operator.addEventListener("click", (event) => {
+    calcArr.push(display.innerText);
+    display.innerText = operator.innerHTML;
+    calcArr.push(operator.innerHTML);
+
+    console.log(calcArr);
+  });
+});
