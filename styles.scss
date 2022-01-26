@@ -4,14 +4,111 @@
 
 // TYPOGRAPHY
 
-.calculator {
-  height: 400px;
-  width: 300px;
-  background-color: greenyellow;
-}
+// BASE
 
 // MOBILE
+@media screen and (max-width: 480px) {
+  .container {
+    background-color: rgb(114, 220, 60);
+
+    height: 230px;
+    width: 200px;
+
+    border-radius: 8px 8px 40px 40px;
+    border: 1px solid rgb(22, 175, 22);
+
+    &__display {
+      background-color: rgb(255, 255, 255);
+      color: rgb(43, 66, 120);
+
+      height: 45px;
+      width: 180px;
+
+      border-radius: 5px;
+      border: 1px solid rgb(179, 180, 176);
+      border-top: 1px solid rgb(122, 124, 120);
+
+      margin: 10px auto;
+    }
+
+    &__buttons {
+      // height: 150px;
+      width: 130px;
+
+      margin: 20px;
+
+      display: flex;
+      justify-content: space-around;
+
+      & button {
+        background-color: rgb(56, 160, 137);
+        color: rgb(251, 255, 255);
+
+        border-radius: 3px;
+        border: none;
+        width: 30px;
+        height: 20px;
+      }
+
+      & button:active {
+        background-color: rgb(251, 255, 255);
+        color: rgb(56, 160, 137);
+      }
+    }
+  }
+
+  #plus {
+    background-color: rgb(255, 255, 255);
+    color: rgb(55, 188, 145);
+
+    font-size: 18px;
+  }
+  #plus:active {
+    background-color: rgb(255, 202, 87);
+    color: rgb(255, 255, 255);
+  }
+}
+
+//   .container {
+//     margin: 20px;
+//   }
+//   .calculator {
+//     height: 230px;
+//     width: 200px;
+//     background-color: rgb(134, 216, 12);
+//     border-radius: 8px 8px 40px 40px;
+//     border: 1px solid rgb(22, 175, 22);
+
+//     padding-top: 15px;
+
+//     display: flex;
+//     // align-items: center;
+//     justify-content: center;
+//     // grid-template-columns: 1fr;
+//   }
+
+//   .display {
+//     background-color: rgb(238, 234, 234);
+//     width: 180px;
+//     height: 45px;
+//     border-radius: 5px;
+//     border: 1px solid rgb(179, 180, 176);
+//     border-top: 1px solid rgb(122, 124, 120);
+//   }
+//   .containerbuttons {
+//     width: 100px;
+//     height: 100px;
+//     background: pink;
+//   }
+//   .buttons {
+//     padding: 20px;
+//   }
+// }
 
 // TABLET
+@media screen and (min-width: 480px) and (max-width: 768px) {
+}
 
 // DESKTOP
+@media screen and (min-width: 768px) {
+}
