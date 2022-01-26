@@ -3,112 +3,218 @@
 // COLOURS
 
 // TYPOGRAPHY
-
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 // BASE
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "VT323";
+}
 
 // MOBILE
 @media screen and (max-width: 480px) {
-  .container {
-    background-color: rgb(114, 220, 60);
+  .calc {
+    background-color: rgb(69, 108, 160);
 
-    height: 230px;
+    height: 325px;
+    width: 200px;
+    border-radius: 8px 8px 30px 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin: 20px;
+    padding: 3px;
+
+    border: 1px solid black;
+    border-right: 6px solid black;
+  }
+
+  #display {
+    background-color: rgb(219, 219, 219);
+    height: 60px;
+    width: 160px;
+    border-radius: 2px;
+    margin-top: 15px;
+    margin-bottom: 45px;
+    padding: 5px 8px 0 8px;
+    text-align: right;
+    font-size: 30px;
+    box-shadow: inset 5px 2px black;
+    border: 2px solid black;
+    border-right: 1 solid black;
+  }
+
+  .button-container {
+    height: 350px;
     width: 200px;
 
-    border-radius: 8px 8px 40px 40px;
-    border: 1px solid rgb(22, 175, 22);
+    display: grid;
+    grid-template-columns: 30px 30px 30px 30px 30px;
+    grid-auto-rows: 40px 40px 40px 40px;
+    grid-template-areas:
+      "message a b c divides"
+      "reset d e f multiply"
+      "modulus g h i minus"
+      "equals equals zero plus plus";
+    grid-gap: 4px;
 
-    &__display {
-      background-color: rgb(255, 255, 255);
-      color: rgb(43, 66, 120);
-
-      height: 45px;
-      width: 180px;
-
-      border-radius: 5px;
-      border: 1px solid rgb(179, 180, 176);
-      border-top: 1px solid rgb(122, 124, 120);
-
-      margin: 10px auto;
-    }
-
-    &__buttons {
-      // height: 150px;
-      width: 130px;
-
-      margin: 20px;
-
-      display: flex;
-      justify-content: space-around;
-
-      & button {
-        background-color: rgb(56, 160, 137);
-        color: rgb(251, 255, 255);
-
-        border-radius: 3px;
-        border: none;
-        width: 30px;
-        height: 20px;
-      }
-
-      & button:active {
-        background-color: rgb(251, 255, 255);
-        color: rgb(56, 160, 137);
-      }
-    }
+    justify-content: center;
   }
 
+  button {
+    height: 35px;
+    width: 30px;
+    background-color: white;
+
+    border-radius: 5px;
+
+    border: none;
+    text-align: center;
+
+    border-left: 1px solid black;
+    border-right: 4px solid black;
+    font-weight: bold;
+  }
+
+  button:active {
+    background-color: rgb(69, 108, 160);
+    color: white;
+  }
+  .operator {
+    border-radius: 50px;
+    font-size: 25px;
+  }
+
+  // ROW ONE
+  #message {
+    grid-area: message;
+  }
+  #seven {
+    grid-area: a;
+  }
+  #eight {
+    grid-area: b;
+  }
+  #nine {
+    grid-area: c;
+  }
+  #divides {
+    grid-area: divides;
+  }
+
+  // ROW TWO
+  #reset {
+    grid-area: reset;
+  }
+  #four {
+    grid-area: d;
+  }
+  #five {
+    grid-area: e;
+  }
+  #six {
+    grid-area: f;
+  }
+  #multiply {
+    grid-area: multiply;
+  }
+  // ROW THREE
+  #modulus {
+    grid-area: modulus;
+  }
+  #one {
+    grid-area: g;
+  }
+  #two {
+    grid-area: h;
+  }
+  #three {
+    grid-area: i;
+  }
+  #minus {
+    grid-area: minus;
+  }
+
+  //  ROW FOUR
+  #zero {
+    grid-area: zero;
+  }
+
+  #equals {
+    grid-area: equals;
+  }
   #plus {
-    background-color: rgb(255, 255, 255);
-    color: rgb(55, 188, 145);
-
-    font-size: 18px;
+    grid-area: plus;
   }
-  #plus:active {
-    background-color: rgb(255, 202, 87);
-    color: rgb(255, 255, 255);
+
+  // button {
+  //   border-radius: 50px;
+  //   border: none;
+  //   background-color: white;
+  //   font-size: 30px;
+  // }
+  // border-radius: 8px 8px 40px 40px;
+  // border: 1px solid rgb(22, 175, 22);
+
+  // &__display {
+  //   background-color: rgb(255, 255, 255);
+  //   color: rgb(43, 66, 120);
+
+  //   height: 45px;
+  //   width: 180px;
+
+  //   border-radius: 5px;
+  //   border: 1px solid rgb(179, 180, 176);
+  //   border-top: 1px solid rgb(122, 124, 120);
+
+  //   margin: 10px auto;
+  // }
+
+  // &__buttons {
+  //   // height: 150px;
+  //   width: 130px;
+
+  //   margin: 20px;
+
+  //   display: flex;
+  //   justify-content: space-around;
+
+  //   & button {
+  //     background-color: rgb(56, 160, 137);
+  //     color: rgb(251, 255, 255);
+
+  //     border-radius: 3px;
+  //     border: none;
+  //     width: 30px;
+  //     height: 20px;
+  //   }
+
+  //   & button:active {
+  //     background-color: rgb(251, 255, 255);
+  //     color: rgb(56, 160, 137);
+  //   }
+
+  // #plus {
+  //   background-color: rgb(255, 255, 255);
+  //   color: rgb(55, 188, 145);
+
+  //   font-size: 18px;
+  // }
+  // #plus:active {
+  //   background-color: rgb(255, 202, 87);
+  //   color: rgb(255, 255, 255);
+  // }
+
+  // TABLET
+  @media screen and (min-width: 480px) and (max-width: 768px) {
   }
-}
 
-//   .container {
-//     margin: 20px;
-//   }
-//   .calculator {
-//     height: 230px;
-//     width: 200px;
-//     background-color: rgb(134, 216, 12);
-//     border-radius: 8px 8px 40px 40px;
-//     border: 1px solid rgb(22, 175, 22);
-
-//     padding-top: 15px;
-
-//     display: flex;
-//     // align-items: center;
-//     justify-content: center;
-//     // grid-template-columns: 1fr;
-//   }
-
-//   .display {
-//     background-color: rgb(238, 234, 234);
-//     width: 180px;
-//     height: 45px;
-//     border-radius: 5px;
-//     border: 1px solid rgb(179, 180, 176);
-//     border-top: 1px solid rgb(122, 124, 120);
-//   }
-//   .containerbuttons {
-//     width: 100px;
-//     height: 100px;
-//     background: pink;
-//   }
-//   .buttons {
-//     padding: 20px;
-//   }
-// }
-
-// TABLET
-@media screen and (min-width: 480px) and (max-width: 768px) {
-}
-
-// DESKTOP
-@media screen and (min-width: 768px) {
+  // DESKTOP
+  @media screen and (min-width: 768px) {
+  }
 }

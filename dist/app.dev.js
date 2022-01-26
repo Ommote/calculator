@@ -30,6 +30,8 @@ numbers.forEach(function (number) {
       display.innerText = "";
     } else if (display.innerText === "/") {
       display.innerText = "";
+    } else if (display.innerText === "%") {
+      display.innerText = "";
     }
 
     display.innerText += number.innerHTML;
@@ -43,4 +45,51 @@ operators.forEach(function (operator) {
     calcArr.push(operator.innerHTML);
     console.log(calcArr);
   });
+}); // logic for equals button: performs calculation based on value of calcArr[1] (whether it is a +, -, *, /)
+
+equals.addEventListener("click", function (event) {
+  console.log(display.innerText);
+  calcArr.push(display.innerText);
+  display.innerText = equals.innerHTML;
+  calcArr.push(equals.innerHTML);
+  var total = 0;
+
+  switch (calcArr[1]) {
+    case "+":
+      total = Number(calcArr[0]) + Number(calcArr[2]);
+      break;
+
+    case "-":
+      total = Number(calcArr[0]) - Number(calcArr[2]);
+      break;
+
+    case "/":
+      total = Number(calcArr[0]) / Number(calcArr[2]);
+      break;
+
+    case "*":
+      total = Number(calcArr[0]) * Number(calcArr[2]);
+      break;
+
+    case "%":
+      total = Number(calcArr[0]) % Number(calcArr[2]);
+      break;
+
+    default:
+      display.innerText = "Error";
+  }
+
+  display.innerText = total;
+});
+reset.addEventListener("click", function (event) {
+  display.innerText = "";
+  calcArr = [];
+});
+
+var hello = function hello() {
+  display.innerText = "Hello, world";
+};
+
+message.addEventListener("click", function (event) {
+  hello(); //   setTimeout((display.innerText = ""), 1000);
 });

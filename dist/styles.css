@@ -1,48 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "VT323";
+}
+
 @media screen and (max-width: 480px) {
-  .container {
-    background-color: #72dc3c;
-    height: 230px;
+  .calc {
+    background-color: #456ca0;
+    height: 325px;
     width: 200px;
-    border-radius: 8px 8px 40px 40px;
-    border: 1px solid #16af16;
-  }
-  .container__display {
-    background-color: white;
-    color: #2b4278;
-    height: 45px;
-    width: 180px;
-    border-radius: 5px;
-    border: 1px solid #b3b4b0;
-    border-top: 1px solid #7a7c78;
-    margin: 10px auto;
-  }
-  .container__buttons {
-    width: 130px;
-    margin: 20px;
+    border-radius: 8px 8px 30px 30px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 20px;
+    padding: 3px;
+    border: 1px solid black;
+    border-right: 6px solid black;
   }
-  .container__buttons button {
-    background-color: #38a089;
-    color: #fbffff;
-    border-radius: 3px;
-    border: none;
+
+  #display {
+    background-color: #dbdbdb;
+    height: 60px;
+    width: 160px;
+    border-radius: 2px;
+    margin-top: 15px;
+    margin-bottom: 45px;
+    padding: 5px 8px 0 8px;
+    text-align: right;
+    font-size: 30px;
+    box-shadow: inset 5px 2px black;
+    border: 2px solid black;
+    border-right: 1 solid black;
+  }
+
+  .button-container {
+    height: 350px;
+    width: 200px;
+    display: grid;
+    grid-template-columns: 30px 30px 30px 30px 30px;
+    grid-auto-rows: 40px 40px 40px 40px;
+    grid-template-areas: "message a b c divides" "reset d e f multiply" "modulus g h i minus" "equals equals zero plus plus";
+    grid-gap: 4px;
+    justify-content: center;
+  }
+
+  button {
+    height: 35px;
     width: 30px;
-    height: 20px;
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    border-left: 1px solid black;
+    border-right: 4px solid black;
+    font-weight: bold;
   }
-  .container__buttons button:active {
-    background-color: #fbffff;
-    color: #38a089;
+
+  button:active {
+    background-color: #456ca0;
+    color: white;
+  }
+
+  .operator {
+    border-radius: 50px;
+    font-size: 25px;
+  }
+
+  #message {
+    grid-area: message;
+  }
+
+  #seven {
+    grid-area: a;
+  }
+
+  #eight {
+    grid-area: b;
+  }
+
+  #nine {
+    grid-area: c;
+  }
+
+  #divides {
+    grid-area: divides;
+  }
+
+  #reset {
+    grid-area: reset;
+  }
+
+  #four {
+    grid-area: d;
+  }
+
+  #five {
+    grid-area: e;
+  }
+
+  #six {
+    grid-area: f;
+  }
+
+  #multiply {
+    grid-area: multiply;
+  }
+
+  #modulus {
+    grid-area: modulus;
+  }
+
+  #one {
+    grid-area: g;
+  }
+
+  #two {
+    grid-area: h;
+  }
+
+  #three {
+    grid-area: i;
+  }
+
+  #minus {
+    grid-area: minus;
+  }
+
+  #zero {
+    grid-area: zero;
+  }
+
+  #equals {
+    grid-area: equals;
   }
 
   #plus {
-    background-color: white;
-    color: #37bc91;
-    font-size: 18px;
-  }
-
-  #plus:active {
-    background-color: #ffca57;
-    color: white;
+    grid-area: plus;
   }
 }
