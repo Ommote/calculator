@@ -93,10 +93,19 @@ reset.addEventListener("click", (event) => {
 // };
 
 const hello = () => {
-  display.innerText = "hello";
+  display.innerText = "Hello";
+};
+const world = () => {
+  display.innerText = "World";
+};
+
+const blank = () => {
+  display.innerText = "";
 };
 
 message.addEventListener("click", (event) => {
   hello();
+  setTimeout(world, 1200);
+  setTimeout(blank, 3000);
   //   setTimeout((display.innerText = ""), 1000);
 });

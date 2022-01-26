@@ -89,9 +89,19 @@ reset.addEventListener("click", function (event) {
 // };
 
 var hello = function hello() {
-  display.innerText = "hello";
+  display.innerText = "Hello";
+};
+
+var world = function world() {
+  display.innerText = "World";
+};
+
+var blank = function blank() {
+  display.innerText = "";
 };
 
 message.addEventListener("click", function (event) {
-  hello(); //   setTimeout((display.innerText = ""), 1000);
+  hello();
+  setTimeout(world, 1200);
+  setTimeout(blank, 3000); //   setTimeout((display.innerText = ""), 1000);
 });
