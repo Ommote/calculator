@@ -25,7 +25,8 @@ body {
   }
 
   #display {
-    background-color: #dbdbdb;
+    background: #d7d0d0;
+    background: linear-gradient(90deg, #d7d0d0 16%, #a19c9c 51%, #d7d0d0 89%);
     height: 80px;
     width: 160px;
     border-radius: 2px;
@@ -172,12 +173,13 @@ body {
   }
 
   #display {
-    background-color: #dbdbdb;
+    background: #d7d0d0;
+    background: linear-gradient(90deg, #d7d0d0 16%, #a19c9c 51%, #d7d0d0 89%);
     height: 120px;
     width: 80%;
     border-radius: 2px;
     margin-top: 35px;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
     padding: 5px 8px 0 8px;
     text-align: right;
     font-size: 30px;

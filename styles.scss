@@ -37,7 +37,14 @@ body {
   }
 
   #display {
-    background-color: rgb(219, 219, 219);
+    background: rgb(215, 208, 208);
+    background: linear-gradient(
+      90deg,
+      rgba(215, 208, 208, 1) 16%,
+      rgba(161, 156, 156, 1) 51%,
+      rgba(215, 208, 208, 1) 89%
+    );
+    // background-color: rgb(219, 219, 219);
     height: 80px;
     width: 160px;
     border-radius: 2px;
@@ -188,12 +195,18 @@ body {
   }
 
   #display {
-    background-color: rgb(219, 219, 219);
+    background: rgb(215, 208, 208);
+    background: linear-gradient(
+      90deg,
+      rgba(215, 208, 208, 1) 16%,
+      rgba(161, 156, 156, 1) 51%,
+      rgba(215, 208, 208, 1) 89%
+    );
     height: 120px;
     width: 80%;
     border-radius: 2px;
     margin-top: 35px;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
     padding: 5px 8px 0 8px;
     text-align: right;
     font-size: 30px;
