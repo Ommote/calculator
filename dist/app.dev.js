@@ -84,10 +84,12 @@ equals.addEventListener("click", function (event) {
 reset.addEventListener("click", function (event) {
   display.innerText = "";
   calcArr = [];
-});
+}); // const hello = () => {
+//   display.innerText = "Hello";
+// };
 
 var hello = function hello() {
-  display.innerText = "Hello";
+  display.innerText = "hello";
 };
 
 message.addEventListener("click", function (event) {

@@ -1,7 +1,9 @@
 // VARIABLES
 
 // COLOURS
-
+$calccol: rgb(69, 108, 160);
+$white: rgb(255, 255, 255);
+$activecol: #792420;
 // TYPOGRAPHY
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 // BASE
@@ -16,7 +18,7 @@ body {
 // MOBILE
 @media screen and (max-width: 480px) {
   .calc {
-    background-color: rgb(69, 108, 160);
+    background-color: $calccol;
 
     height: 350px;
     width: 200px;
@@ -70,6 +72,7 @@ body {
   button {
     height: 35px;
     width: 30px;
+    font-size: 18px;
     background-color: white;
 
     border-radius: 5px;
@@ -78,13 +81,13 @@ body {
     text-align: center;
 
     // border-left: 1px solid black;
-    border-right: 5px solid black;
+    border-right: 4px solid black;
     font-weight: bold;
   }
 
   button:active {
-    background-color: #2a426c;
-    color: white;
+    background-color: $activecol;
+    color: $white;
   }
   .operator {
     border-radius: 50px;
@@ -96,6 +99,7 @@ body {
     grid-area: message;
     background-color: goldenrod;
     color: white;
+    font-size: 16px;
   }
   #message:active {
     background-color: white;
@@ -160,157 +164,163 @@ body {
     grid-area: plus;
     width: 30px;
   }
+}
+// TABLET
+@media screen and (min-width: 480px) {
+  .calc {
+    background-color: rgb(69, 108, 160);
 
-  // TABLET
-  @media screen and (min-width: 480px) and (max-width: 768px) {
-    .calc {
-      background-color: rgb(69, 108, 160);
+    height: 650px;
+    // width: 480px;
+    width: 80%;
+    border-radius: 8px 8px 30px 30px;
 
-      height: 350px;
-      width: 200px;
-      border-radius: 8px 8px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
+    margin: 40px;
+    padding: 3px;
 
-      margin: 20px;
-      padding: 3px;
-
-      border: 1px solid black;
-      border-right: 6px solid black;
-    }
-
-    #display {
-      background-color: rgb(219, 219, 219);
-      height: 80px;
-      width: 160px;
-      border-radius: 2px;
-      margin-top: 15px;
-      margin-bottom: 50px;
-      padding: 5px 8px 0 8px;
-      text-align: right;
-      font-size: 30px;
-      box-shadow: inset 5px 2px black;
-      border: 2px solid black;
-      border-right: 1 solid black;
-      font-size: 50px;
-    }
-
-    .button-container {
-      height: 350px;
-      width: 200px;
-
-      display: grid;
-      grid-template-columns: 30px 30px 30px 30px 30px;
-      grid-auto-rows: 40px 40px 40px 40px;
-      grid-template-areas:
-        "message a b c divides"
-        "reset d e f multiply"
-        "modulus g h i minus"
-        "equals equals equals zero plus";
-      grid-gap: 4px;
-
-      justify-content: center;
-    }
-
-    button {
-      height: 35px;
-      width: 30px;
-      background-color: white;
-
-      border-radius: 5px;
-
-      border: none;
-      text-align: center;
-
-      // border-left: 1px solid black;
-      border-right: 5px solid black;
-      font-weight: bold;
-    }
-
-    button:active {
-      background-color: #2a426c;
-      color: white;
-    }
-    .operator {
-      border-radius: 50px;
-      font-size: 25px;
-    }
-
-    // ROW ONE
-    #message {
-      grid-area: message;
-      background-color: goldenrod;
-      color: white;
-    }
-    #message:active {
-      background-color: white;
-      color: black;
-    }
-    #seven {
-      grid-area: a;
-    }
-    #eight {
-      grid-area: b;
-    }
-    #nine {
-      grid-area: c;
-    }
-    #divides {
-      grid-area: divides;
-    }
-
-    // ROW TWO
-    #reset {
-      grid-area: reset;
-    }
-    #four {
-      grid-area: d;
-    }
-    #five {
-      grid-area: e;
-    }
-    #six {
-      grid-area: f;
-    }
-    #multiply {
-      grid-area: multiply;
-    }
-    // ROW THREE
-    #modulus {
-      grid-area: modulus;
-    }
-    #one {
-      grid-area: g;
-    }
-    #two {
-      grid-area: h;
-    }
-    #three {
-      grid-area: i;
-    }
-    #minus {
-      grid-area: minus;
-    }
-
-    //  ROW FOUR
-    #zero {
-      grid-area: zero;
-    }
-
-    #equals {
-      grid-area: equals;
-      width: 98px;
-    }
-    #plus {
-      grid-area: plus;
-      width: 30px;
-    }
+    border: 2px solid black;
+    border-right: 10px solid black;
   }
 
-  // DESKTOP
-  @media screen and (min-width: 768px) {
+  #display {
+    background-color: rgb(219, 219, 219);
+    height: 120px;
+    width: 80%;
+    border-radius: 2px;
+    margin-top: 35px;
+    margin-bottom: 50px;
+    padding: 5px 8px 0 8px;
+    text-align: right;
+    font-size: 30px;
+    box-shadow: inset 10px 8px black;
+    border: 3px solid black;
+    border-right: 1 solid black;
+    font-size: 100px;
+  }
+
+  .button-container {
+    height: 350px;
+    width: 80%;
+
+    display: grid;
+    grid-template-columns: 60px 60px 60px 60px 60px;
+    grid-auto-rows: 4, 40%;
+    grid-template-areas:
+      "message a b c divides"
+      "reset d e f multiply"
+      "modulus g h i minus"
+      "equals equals equals zero plus";
+    grid-gap: 15px;
+
+    justify-content: center;
+  }
+
+  button {
+    height: 70px;
+    width: 65px;
+    background-color: white;
+
+    border-radius: 5px;
+
+    text-align: center;
+    border: 1px solid black;
+
+    border-right: 8px solid black;
+
+    font-weight: bold;
+    font-size: 55px;
+  }
+
+  button:active {
+    background-color: $activecol;
+    color: $white;
+  }
+  .operator {
+    border-radius: 50px;
+    font-size: 25px;
+  }
+
+  // ROW ONE
+  #message {
+    grid-area: message;
+    background-color: goldenrod;
+    color: white;
+    font-size: 30px;
+  }
+  #message:active {
+    background-color: white;
+    color: black;
+  }
+  #seven {
+    grid-area: a;
+  }
+  #eight {
+    grid-area: b;
+  }
+  #nine {
+    grid-area: c;
+  }
+  #divides {
+    grid-area: divides;
+  }
+
+  // ROW TWO
+  #reset {
+    grid-area: reset;
+    font-size: 30px;
+  }
+  #four {
+    grid-area: d;
+  }
+  #five {
+    grid-area: e;
+  }
+  #six {
+    grid-area: f;
+  }
+  #multiply {
+    grid-area: multiply;
+  }
+  // ROW THREE
+  #modulus {
+    grid-area: modulus;
+  }
+  #one {
+    grid-area: g;
+  }
+  #two {
+    grid-area: h;
+  }
+  #three {
+    grid-area: i;
+  }
+  #minus {
+    grid-area: minus;
+  }
+
+  //  ROW FOUR
+  #zero {
+    grid-area: zero;
+  }
+
+  #equals {
+    grid-area: equals;
+    width: 210px;
+  }
+  #plus {
+    grid-area: plus;
+  }
+
+  .operator {
+    font-size: 50px;
   }
 }
+
+// // DESKTOP
+// @media screen and (min-width: 768px) {
+// }

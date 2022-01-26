@@ -88,8 +88,12 @@ reset.addEventListener("click", (event) => {
   calcArr = [];
 });
 
+// const hello = () => {
+//   display.innerText = "Hello";
+// };
+
 const hello = () => {
-  display.innerText = "Hello";
+  display.innerText = "hello";
 };
 
 message.addEventListener("click", (event) => {

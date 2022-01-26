@@ -54,16 +54,17 @@ body {
   button {
     height: 35px;
     width: 30px;
+    font-size: 18px;
     background-color: white;
     border-radius: 5px;
     border: none;
     text-align: center;
-    border-right: 5px solid black;
+    border-right: 4px solid black;
     font-weight: bold;
   }
 
   button:active {
-    background-color: #2a426c;
+    background-color: #792420;
     color: white;
   }
 
@@ -76,6 +77,7 @@ body {
     grid-area: message;
     background-color: goldenrod;
     color: white;
+    font-size: 16px;
   }
 
   #message:active {
@@ -153,62 +155,63 @@ body {
     width: 30px;
   }
 }
-@media screen and (max-width: 480px) and (min-width: 480px) and (max-width: 768px) {
+@media screen and (min-width: 480px) {
   .calc {
     background-color: #456ca0;
-    height: 350px;
-    width: 200px;
+    height: 650px;
+    width: 80%;
     border-radius: 8px 8px 30px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    margin: 20px;
+    margin: 40px;
     padding: 3px;
-    border: 1px solid black;
-    border-right: 6px solid black;
+    border: 2px solid black;
+    border-right: 10px solid black;
   }
 
   #display {
     background-color: #dbdbdb;
-    height: 80px;
-    width: 160px;
+    height: 120px;
+    width: 80%;
     border-radius: 2px;
-    margin-top: 15px;
+    margin-top: 35px;
     margin-bottom: 50px;
     padding: 5px 8px 0 8px;
     text-align: right;
     font-size: 30px;
-    box-shadow: inset 5px 2px black;
-    border: 2px solid black;
+    box-shadow: inset 10px 8px black;
+    border: 3px solid black;
     border-right: 1 solid black;
-    font-size: 50px;
+    font-size: 100px;
   }
 
   .button-container {
     height: 350px;
-    width: 200px;
+    width: 80%;
     display: grid;
-    grid-template-columns: 30px 30px 30px 30px 30px;
-    grid-auto-rows: 40px 40px 40px 40px;
+    grid-template-columns: 60px 60px 60px 60px 60px;
+    grid-auto-rows: 4, 40%;
     grid-template-areas: "message a b c divides" "reset d e f multiply" "modulus g h i minus" "equals equals equals zero plus";
-    grid-gap: 4px;
+    grid-gap: 15px;
     justify-content: center;
   }
 
   button {
-    height: 35px;
-    width: 30px;
+    height: 70px;
+    width: 65px;
     background-color: white;
     border-radius: 5px;
-    border: none;
     text-align: center;
-    border-right: 5px solid black;
+    border: 1px solid black;
+    border-right: 8px solid black;
     font-weight: bold;
+    font-size: 55px;
   }
 
   button:active {
-    background-color: #2a426c;
+    background-color: #792420;
     color: white;
   }
 
@@ -221,6 +224,7 @@ body {
     grid-area: message;
     background-color: goldenrod;
     color: white;
+    font-size: 30px;
   }
 
   #message:active {
@@ -246,6 +250,7 @@ body {
 
   #reset {
     grid-area: reset;
+    font-size: 30px;
   }
 
   #four {
@@ -290,11 +295,14 @@ body {
 
   #equals {
     grid-area: equals;
-    width: 98px;
+    width: 210px;
   }
 
   #plus {
     grid-area: plus;
-    width: 30px;
+  }
+
+  .operator {
+    font-size: 50px;
   }
 }
