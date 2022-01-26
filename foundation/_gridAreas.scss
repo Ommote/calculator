@@ -1,0 +1,70 @@
+// ROW ONE
+#message {
+  grid-area: message;
+  background-color: goldenrod;
+  color: white;
+  font-size: 16px;
+}
+#message:active {
+  background-color: white;
+  color: black;
+}
+#seven {
+  grid-area: a;
+}
+#eight {
+  grid-area: b;
+}
+#nine {
+  grid-area: c;
+}
+#divides {
+  grid-area: divides;
+}
+
+// ROW TWO
+#reset {
+  grid-area: reset;
+}
+#four {
+  grid-area: d;
+}
+#five {
+  grid-area: e;
+}
+#six {
+  grid-area: f;
+}
+#multiply {
+  grid-area: multiply;
+}
+// ROW THREE
+#modulus {
+  grid-area: modulus;
+}
+#one {
+  grid-area: g;
+}
+#two {
+  grid-area: h;
+}
+#three {
+  grid-area: i;
+}
+#minus {
+  grid-area: minus;
+}
+
+//  ROW FOUR
+#zero {
+  grid-area: zero;
+}
+
+#equals {
+  grid-area: equals;
+  width: 98px;
+}
+#plus {
+  grid-area: plus;
+  width: 30px;
+}
